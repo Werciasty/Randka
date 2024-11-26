@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(218, 189, 195);
+}
+@keyframes pulse {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1); 
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+}
+.animation-container {
+    position: relative;
+    width: 92%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
+}
+.animated-heart {
+    position: absolute;
+    bottom: -140px;  
+    animation: moveUp linear infinite;
+    width: 100px;
+    height: 100px;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(-50vh) scale(1.2); 
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.8); 
+        opacity: 0.7;
+    }
+}
+.kontener {
+    width: 99%;
+}
+.TextOne {
+    font-family: 'Roboto Slab', serif;
+    color: rgb(240, 44, 109);
+    letter-spacing: 1px;
+    z-index: 10;
+    font-size: 20px;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.63);
+    animation: pulse 1.5s infinite;
+}
+.ButtOne {
+    background-color: rgb(240, 44, 109);
+    width: 120px;
+    height: 60px;
+    border-radius: 20%;
+    border: solid 1px rgb(240, 44, 109);
+    cursor: pointer;
+    text-align: center;
+    z-index: 10;
+    margin-top: 20px;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.63);
+}
+#pierw {
+    background-color: rgb(240, 44, 109);
+    width: 120px;
+    height: 60px;
+    margin-right: 35px;
+    border-radius: 20%;
+    border: solid 1px rgb(201, 38, 89);
+    cursor: pointer;
+    text-align: center;
+    z-index: 10;
+    margin-top: 20px;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+#pierw:hover {
+    background-color: rgb(255, 203, 244);
+    border-color:  rgb(184, 88, 163);
+    color: rgb(216, 0, 72);
+}
+#pierw::before,
+#pierw::after {
+    content: "😍";
+    position: absolute;
+    font-size: 18px;
+    animation: moveHearts 1.5s infinite ease-in-out;
+}
+#pierw::before {
+    top: 10px;
+    left: 10px;
+    animation-delay: 0.3s;
+}
+#pierw::after {
+    bottom: 10px;
+    right: 10px;
+    animation-delay: 0.6s; 
+}
+@keyframes moveHearts {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#drug {
+    background-color: rgb(240, 44, 109);
+    width: 120px;
+    height: 60px;
+    border-radius: 20%;
+    border: solid 1px rgb(201, 38, 89);
+    cursor: pointer;
+    text-align: center;
+    z-index: 10;
+    margin-top: 20px;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+#drug:hover {
+    background-color: rgb(255, 203, 244);
+    border-color:  rgb(184, 88, 163);
+    color: rgb(216, 0, 72);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+#drug::before,
+#drug::after {
+    content: "🥺"; 
+    position: absolute;
+    font-size: 18px;
+    animation: moveEmotka 1.5s infinite ease-in-out;
+}
+#drug::before {
+    top: 10px;
+    left: 10px;
+    animation-delay: 0.3s;
+}
+#drug::after {
+    bottom: 10px;
+    right: 10px;
+    animation-delay: 0.6s;
+}
+@keyframes moveEmotka {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.buttons {
+    display: flex;
+    justify-content: center; 
+}
+.cat{
+    margin-top: -140px;
+    width: 250px;
+    height: 250px;
+    border: solid 2px rgb(245, 138, 156);
+    border-radius: 10px;
+    z-index: 10;
+}
+.margin{
+    margin-left: 108px;
+}
+.kontener, .buttons, .TextOne, .cat {
+    position: relative;
+    z-index: 10; 
+}
